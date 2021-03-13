@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Pi#WeaterStation</title>
+<link rel = "icon" href = "https://www.flaticon.com/svg/vstatic/svg/1163/1163661.svg?token=exp=1614891248~hmac=34000d9096f612098f8def26e4dcda4a" type = "image/x-icon"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>#</b><br><br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <!--<a href="#openweathermap" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">OpenWeatherMap</a> -->
+    <a href="#Settings" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Settings</a> 
+    <a href="#3D Print" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">3D Print</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span> </span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Pi#</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>WeatherStation.</b></h1>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="./templates/Img/71v9OUYxgoL._AC_SX450_.jpg" style="width:100%">
+    <img class="mySlides" src="./templates/Img/kitchenconcrete.jpg" style="width:100%">
+
+  
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  
+  <!-- Settings -->
+  <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="w3-container" id="Settings" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Settings.</b></h1>
+    <hr style="width:50px;border:5px solid;color:#2196f3"  class="w3-round">
+    
+    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form action="" method="post" >
+      <div class="w3-section">
+        <label>City</label>
+        <input class="w3-input w3-border" type="text" name="city"  value = "{{City}}" placeholder="Berlin" required>
+      </div>
+      <a class="w3-button w3-block w3-padding-large w3-light-grey w3-margin-bottom" style="width:100%; color:#616161" href="https://openweathermap.org/">OpenWeatherMap.org</a>
+      <div class="w3-section">
+        <label>API</label>
+        <input class="w3-input w3-border" type="text" value = "{{API}}" placeholder="747as5e7df38frtRq62sa8qwe6wer8wq"  name="api" required>
+      </div>
+      <div class="w3-section">
+        <label>Latitude</label>
+        <input class="w3-input w3-border" type="number" step=0.000001 name="Latitude" value = "{{Latitude}}" placeholder="52.520008" required>
+      </div>
+      <div class="w3-section">
+        <label>Longitude</label>
+        <input class="w3-input w3-border" type="number" step=0.000001 name="Longitude"  value = "{{Longitude}}" placeholder="13.404954" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Set</button>
+    </form>  
+  </div>  
+
+
+
+
+  <!-- 3D Print -->
+  <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="w3-container" id="3D Print" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>3D Print.</b></h1>
+    <hr style="width:50px;border:5px solid;color:#2196f3"  class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="#" title="W3.CSS" target="_blank" class="w3-hover-opacity">ElectricSpark.</a></p></div>
+
+
+<script>
+// Script to open and close sidebar
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function select(unit){
+  document.getElementById("select").value =unit;
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
