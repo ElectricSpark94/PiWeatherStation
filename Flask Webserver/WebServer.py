@@ -7,23 +7,22 @@ import logging
 
 app= Flask(__name__,static_folder='/')
 
-#with open(".Flask/templates/settings.json") as f:
-#  data = json.load(f)
+with open("./templates/settings.json") as f:
+    data = json.load(f)
 
 
 @app.route("/",methods=["POST","GET"])
 def default():
     if request.method== "POST": 
-        #data["Settings"]["City"]= request.form["city"]    
-        #data["Settings"]["API"]= request.form["api"]
-        #data["Settings"]["Latitude"]= request.form["Latitude"]
-        #data["Settings"]["Longitude"]= request.form["Longitude"]
-        #with open("./templates/settings.json","w") as fout:
+        data["Settings"]["City"]= request.form["city"]    
+        data["Settings"]["API"]= request.form["api"]
+        data["Settings"]["Latitude"]= request.form["Latitude"]
+        data["Settings"]["Longitude"]= request.form["Longitude"]
+        #with open("./settings.json","w") as fout:
         #    fout.write(json.dumps(data,indent=4))
-        return render_template("MainPage.html")
+        return render_template("MainPage.html",API =data["Settings"]["API"],Latitude=data["Settings"]["Latitude"],Longitude=data["Settings"]["Longitude"],Unit=data["Settings"]["Unit"],City=data["Settings"]["City"] )
     else:
-        return render_template("MainPage.html")
-        #return render_template("MainPage.html",API =data["Settings"]["API"],Latitude=data["Settings"]["Latitude"],Longitude=data["Settings"]["Longitude"],Unit=data["Settings"]["Unit"],City=data["Settings"]["City"] )
+        return render_template("MainPage.html",API =data["Settings"]["API"],Latitude=data["Settings"]["Latitude"],Longitude=data["Settings"]["Longitude"],Unit=data["Settings"]["Unit"],City=data["Settings"]["City"] )
 
 @app.route("/<default>")
 def user(default):
