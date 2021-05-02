@@ -1,0 +1,13 @@
+{
+    "City": "Wiesloch",
+    "RefreshTime": 10,
+    "OpenWeatherMap": {
+        "API": "7e45a2bf8a32e9bbe1c85ea46d1dc89f",
+        "Latitude": "49.2950",
+        "Longitude": "8.6984", 
+        "Units": "metric",
+        "UnitsFormat": "°C",
+        "DateFormat1": "%d.%m.%Y",
+        "DateFormat2": "%d.%m"
+    }   
+}
