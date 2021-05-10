@@ -10,6 +10,7 @@
 ```python
 sudo raspi-config
 ```
+![](https://www.waveshare.com/w/upload/1/1e/RPI_open_spi.png)
 After activation you should reboot the Pi.
 ```python
 sudo reboot
