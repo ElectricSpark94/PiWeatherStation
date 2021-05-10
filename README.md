@@ -1,5 +1,5 @@
 # PiWeatherStation
-
+![](FrontImage.png)
 ## Installation 
 
 1. Install Raspberry Pi OS Lite on an SD card. A short description can be found on the Raspberry Pi homepage [[click here](https://www.raspberrypi.org/software/ "Raspberry Pi OS")]
