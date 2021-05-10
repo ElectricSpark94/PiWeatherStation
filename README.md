@@ -71,7 +71,7 @@ Download actual GIT repository
 ```python
 sudo mkdir Git
 cd Git
-sudo git clone https://github.com/waveshare/e-Paper
+sudo git clone https://github.com/ElectricSpark94/PiWeatherStation.git
 cd PiWeatherStation
 ```
 Run the Main.py
