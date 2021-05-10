@@ -1,6 +1,6 @@
-PiWeatherStation
+# PiWeatherStation
 
-##Installation 
+## Installation 
 
 1. Install Raspberry Pi OS Lite on an SD card. A short description can be found on the Raspberry Pi homepage [[click here](https://www.raspberrypi.org/software/ "Raspberry Pi OS")]
 
@@ -14,7 +14,7 @@ After activation you should reboot the Pi.
 ```python
 sudo reboot
 ```
-###Install BCM2835 libraries
+### Install BCM2835 libraries
 ```python
 wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.60.tar.gz
 tar zxvf bcm2835-1.60.tar.gz 
@@ -25,7 +25,7 @@ sudo make check
 sudo make install
 ```
 
-###Install WiringPi libraries
+### Install WiringPi libraries
 ```python
 sudo apt-get install wiringpi
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
@@ -33,7 +33,7 @@ sudo dpkg -i wiringpi-latest.deb
 gpio -v
 ```
 
-###Install Python3 libraries
+### Install Python3 libraries
 ```python
 sudo apt-get update
 sudo apt-get install python3-pip
@@ -43,7 +43,7 @@ sudo pip3 install RPi.GPIO
 sudo pip3 install spidev
 sudo apt install git 
 ```
-###Download demo codes from Waveshare
+### Download demo codes from Waveshare
 Download actual GIT repository
 ```python
 sudo git clone https://github.com/waveshare/e-Paper
@@ -79,7 +79,7 @@ Run the Main.py
 sudo python3 Main.py
 ```
 ---
-#Settings
+# Settings
 In the Settings.json the [Openweathermap](https://openweathermap.org/appid "Openweathermap") API-Key must be added. Furthermore, the city, the geographical location and the unit must be set.
 e.g.
 
