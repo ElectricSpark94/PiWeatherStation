@@ -83,8 +83,13 @@ sudo python3 Main.py
 ---
 # Settings
 In the Settings.json the [Openweathermap](https://openweathermap.org/appid "Openweathermap") API-Key must be added. Furthermore, the city, the geographical location and the unit must be set.
-e.g.
+For change setting use following code:
+```python
+cd Git/PiWeatherStation
+sudo nano settings.json
+```
 
+e.g.
 
 |  Setting  | Description |
 | ------------- | ------------- |
