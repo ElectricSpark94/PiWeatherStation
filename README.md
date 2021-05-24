@@ -52,7 +52,7 @@ sudo git clone https://github.com/waveshare/e-Paper
 Run the Demo code
 ```python
 cd ~/e-Paper/RaspberryPi_JetsonNano/python/examples/
-sudo python3 epd_7in5b_V2_test.py
+sudo python3 epd_7in5b_HD_test.py
 ```
 In my case the Raspberry Pi reboots, if i run the democode for the first time. In this case, you have to execute the democode a second time after reboot.
 The demo code should work to operate the weather station
