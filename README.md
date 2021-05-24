@@ -1,5 +1,15 @@
 # PiWeatherStation
 ![](FrontImage.png)
+
+If you like this project, you can support me.
+
+<a href="https://paypal.me/ElectricSpark94" 
+target="_blank">
+<img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" alt="PayPal this" 
+title="PayPal – The safer, easier way to pay online!" border="0" />
+</a>
+
+Thanks to all supporters
 ## Installation 
 
 1. Install Raspberry Pi OS Lite on an SD card. A short description can be found on the Raspberry Pi homepage [[click here](https://www.raspberrypi.org/software/ "Raspberry Pi OS")]
