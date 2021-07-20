@@ -124,11 +124,11 @@ class Display:
             Rimage.paste(Image_red, Position)
 
             #Calc. Text width for Position:
-            width, height =  draw_BImage.textsize("{}".format(data["current"]["pressure"]) ,font = self.font40)
+            width, height =  draw_BImage.textsize("{}/{}".format(round(float(data["daily"][0]["temp"]["min"])),round(float(data["daily"][0]["temp"]["max"]))) ,font = self.font40)
             if settings["OpenWeatherMap"]["Units"]== "imperial":
                 width, height =  draw_BImage.textsize("{}".format( "{}/{}".format(round(float(data["daily"][0]["temp"]["min"])),round(float(data["daily"][0]["temp"]["max"])))) ,font = self.font40)
             else:
-                width, height =  draw_BImage.textsize("{}".format(data["current"]["pressure"]) ,font = self.font40)
+                width, height =  draw_BImage.textsize("{}/{}".format(round(float(data["daily"][0]["temp"]["min"])),round(float(data["daily"][0]["temp"]["max"]))) ,font = self.font40)
 
             XPosition = 410+width
             draw_BImage.text((XPosition-width, 135), "{}/{}".format(round(float(data["daily"][0]["temp"]["min"])),round(float(data["daily"][0]["temp"]["max"]))),font = self.font40, fill = 0)
